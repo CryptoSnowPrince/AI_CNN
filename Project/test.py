@@ -132,5 +132,7 @@ model.eval()
 
 # ✅ Visualize Feature Maps on a Sample
 sample_img, _ = dataset[0]
-print(len(sample_img))
-visualize_feature_maps(model, sample_img)
+# print(len(sample_img))
+# visualize_feature_maps(model, sample_img)
+output = model(sample_img.unsqueeze(0).to(device))
+print(output)
