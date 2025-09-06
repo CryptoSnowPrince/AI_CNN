@@ -1,3 +1,4 @@
 *.pth
 /Project/img/*
 /Data/Dataset.7z
+.venv
