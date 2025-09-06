@@ -121,18 +121,18 @@ def visualize_feature_maps(model, image_tensor, save_dir="./img"):
 
 
 # ✅ Run Training + Validation
-# train(model, train_loader, criterion, optimizer, 5)
+train(model, train_loader, criterion, optimizer, 5)
 # validate(model, val_loader)
 # Save entire model
 torch.save(model, "my_cnn_model_entire.pth")
 
 # Load entire model
-model = torch.load("my_cnn_model_entire.pth", weights_only=False)
-model.eval()
+# model = torch.load("my_cnn_model_entire.pth", weights_only=False)
+# model.eval()
 
-# ✅ Visualize Feature Maps on a Sample
-sample_img, _ = dataset[0]
-# print(len(sample_img))
-# visualize_feature_maps(model, sample_img)
-output = model(sample_img.unsqueeze(0).to(device))
-print(output)
+# # ✅ Visualize Feature Maps on a Sample
+# sample_img, _ = dataset[0]
+# # print(len(sample_img))
+# # visualize_feature_maps(model, sample_img)
+# output = model(sample_img.unsqueeze(0).to(device))
+# print(output)
